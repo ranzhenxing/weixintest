@@ -1,0 +1,19 @@
+<view class='container'>
+  <image class="head-image" src='{{new.headImgSrc}}'></image>
+  <image catchtap="onMusicTap" class="audio" src="{{isPlayingMusic? '/images/music/music-stop.png': '/images/music/music-start.png'}}"></image>
+  <view class='author-date'>
+    <image class="avatar" src="{{new.avatar}}"></image>
+    <text class='author'>{{new.author}}</text>
+    <text class='const-text'>发表于</text>
+    <text class='date'>{{new.dateTime}}</text>
+  </view>
+  <text class="title">{{new.title}}</text>
+  <view class='tool'>
+    <view class='circle-img'>
+      <image bindtap="OnCollection" src="{{isCollected?'/images/icon/collection.png':'/images/icon/collection-anti.png'}}"></image>
+      <image bindtap="OnShare" class="share-img" src="{{isShare?'/images/icon/share.png':'/images/icon/share-anti.png'}}"></image>
+    </view>
+    <view class='horizon'></view>
+  </view>
+  <text class='detail'>{{new.detail}}</text>
+</view>
